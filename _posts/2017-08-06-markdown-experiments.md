@@ -1,12 +1,10 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
-date:   2017-08-04 16:17:54 -0700
-categories: jekyll update
+title:  "Markdown experiments and cheatsheet"
 ---
-Code highlighting
+Code highlighting, can do with or without line numbers by leaving the `linenos`out
 
-{% highlight ruby %}
+{% highlight ruby linenos %}
 def show
   @widget = Widget(params[:id])
   respond_to do |format|
