@@ -13,10 +13,10 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: It's not magic! - programming notes
+title: Bhumi - programming notes
 email: bhumi@example.com
 description: > # this means to ignore newlines until "baseurl:"
-  A place to emphasize knowledge (instead of magic), understanding (as well as using), ideas (instead of specific technology/tool).  A place to practice creating (as well as consuming) and writing (as well as reading). 
+  A place for write things down, about programming mostly
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: bhumi1102
