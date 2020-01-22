@@ -4,22 +4,48 @@ title:  "ENV variables in Rails"
 date:   2020-01-22
 ---
 
-**Favorite explanations:**
+**Environment specific configuration for storing senstitive keys and secrets**
 
-Native Extentions:
+How this is done requres considering the deployment environment. So for heroku specifically:
+https://devcenter.heroku.com/articles/config-vars
 
-[What is a gem native extension](https://stackoverflow.com/questions/31202707/what-exactly-is-a-gem-native-extension)
+After reading this and learning about the existence of this gem figaro, I decided to use it.
+It's compatible with Heroku config vars [Figaro Repo](https://github.com/laserlemon/figaro)
 
-[Building native extensions](http://patshaughnessy.net/2011/10/31/dont-be-terrified-of-building-native-extensions)
+Using it like this in omniauth.rb initializer
 
+{% highlight ruby %}
+Rails.application.config.middleware.use OmniAuth::Builder do
+  provider :google_oauth2, ENV["GOOGLE_APP_ID"], ENV["GOOGLE_APP_SECRET"]
+  provider :facebook, ENV["FACEBOOK_APP_ID"], ENV["FACEBOOK_APP_SECRET"]
+end
+{% endhighlight %}
 
-Intersting questions and answers from linus torvald:
+This gem adds a config/applicaiton.yml in .gitignore.  Looks like this:
+{% highlight ruby %}
+# Add configuration values here, as shown below.
+#
+# pusher_app_id: "2954"
+# pusher_key: 7381a978f7dd7f9a1117
+# pusher_secret: abdc3b896a0ffb85d373
+# stripe_api_key: sk_test_2J0l093xOyW72XUYJHE4Dv2r
+# stripe_publishable_key: pk_test_ro9jV5SNwGb1yYlQfzG17LHK
+#
+# production:
+#   stripe_api_key: sk_live_EeHnL644i6zo4Iyq4v1KdV9H
+#   stripe_publishable_key: pk_live_9lcthxpSIHbGwmdO941O1XVU
 
-[Not every kid should be a programmer](https://www.youtube.com/watch?v=2KfJiWR1FPw)
+FACEBOOK_APP_ID: "fake"
+FACEBOOK_APP_SECRET: "fake"
 
-[Why linux is not on every desktop](https://www.youtube.com/watch?v=KFKxlYNfT_o)
+GOOGLE_APP_ID: "fake.apps.googleusercontent.com"
+GOOGLE_APP_SECRET: "fake-"
 
-[Personality and bluntness](https://www.youtube.com/watch?v=-ZRvHbHxr-k)
+production:
+  FACEBOOK_APP_ID: "fake"
+  FACEBOOK_APP_SECRET: "fake"
 
-[About installing stuff](https://www.youtube.com/watch?v=qHGTs1NSB1s)
+  GOOGLE_APP_ID: "fake.apps.googleusercontent.com"
+  GOOGLE_APP_SECRET: "fake-"
+{% endhighlight %}
 
