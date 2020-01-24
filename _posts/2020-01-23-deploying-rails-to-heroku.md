@@ -30,7 +30,7 @@ So Heroku Hobby plan is $7/mo. Before buying that did a little search on IH for 
 Also I can use Cloudflare to get Free SSL certificates supposedly, curious as steph smith mentioned that she uses it [Shared SSL Certificate](https://www.cloudflare.com/plans/)
 
 Learned more about <mark>Let's Encrypt</mark> - it has a Certbot that automates installation on webservers (Apache, Nginx):
->Let’s Encrypt is a new Certificate Authority (CA) that provides an easy way to obtain and install >free TLS/SSL certificates, thereby enabling encrypted HTTPS on web servers. It simplifies the >process by providing a software client, Certbot, that attempts to automate most (if not all) o>f >the required steps. Currently, the entire process of obtaining and installing a certificate is >fully automated on both Apache and Nginx web servers. 
+>Let’s Encrypt is a new Certificate Authority (CA) that provides an easy way to obtain and install >free TLS/SSL certificates, thereby enabling encrypted HTTPS on web servers. It simplifies the process by providing a software client, Certbot, that attempts to automate most (if not all) of the required steps. Currently, the entire process of obtaining and installing a certificate isfully automated on both Apache and Nginx web servers. 
 
 Side notes:
 * might need to add `config.force_ssl = true` to application.rb (from SO post from 2015) 
