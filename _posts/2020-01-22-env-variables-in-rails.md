@@ -6,8 +6,8 @@ date:   2020-01-22
 
 **Environment specific configuration for storing senstitive keys and secrets**
 
-How this is done requres considering the deployment environment. So for heroku specifically:
-https://devcenter.heroku.com/articles/config-vars
+How this is done requres considering the deployment environment. So for heroku specifically, I can use [config vars](
+https://devcenter.heroku.com/articles/config-vars). I can add config vars using the Heroku console --> settings or from command line using `heroku config:set key=value`
 
 After reading this and learning about the existence of this gem figaro, I decided to use it.
 It's compatible with Heroku config vars [Figaro Repo](https://github.com/laserlemon/figaro)
