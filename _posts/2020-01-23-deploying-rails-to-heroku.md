@@ -32,9 +32,28 @@ Also I can use Cloudflare to get Free SSL certificates supposedly, curious as st
 In Namecheap, I changed from BasicDNS to Custom DNS and entered CloudFlare dns servers as 'nameservers'.  This might mean I'll need to do the A and CNAME record configuration again on CloudFlare to point to the Heroku domain of 'secret-harbor'
 
 
+## How does Let's Encrypt work ##
+
+todo: read this [intro explanation](https://www.digitalocean.com/community/tutorials/an-introduction-to-let-s-encrypt)
+
+Qustion to answer - can I get a free cerrificate from Let's Encrypt and install it on my Heroku server that's hosting my App myself? (like AJ is doing for carrd websites, and like Heroku is doing under-the-hoods when tehy do Automatic Certificate Management for that $7/month)
+
+My guess (before research) - is that yes I could if I had SSH shell access to the Heroku server that is deploying my app.  But I proably don't as that's abstracted away for PaaS like Heroku. So I will have to pay them do it for me.
+
+**Reserach** (time box to 15) - LE (Let's Encrypt) uses ACME protocol [Automated Cetificate Management Environment](https://en.wikipedia.org/wiki/Automated_Certificate_Management_Environment) which they created (they = Internet Security Research Group). 
+
+CertBot = reference implementation of the ACME protocol, python based. Looks there are many many other implementations to choose from depending on your web host operating system and web server.
+
+ACME protocol - basically automates stuff people (admins) used to do manually probably. Communication between certificate authorities (CA) and user's webserver. deploying public key infrastructure. also automatic certificate issuance and renewal too. cool, this seems like a great idea.
+
+**Answer** So yup Heroku supporst Let's Encrypt but not on free plan. This be the answer to my question. The end of research (17 minutes)
+[Heroku (not on free plan)](https://community.letsencrypt.org/t/web-hosting-who-support-lets-encrypt/6920)
+
+Hm..so I have to pay. OR I bet Digital Ocean supports SSL in a free drop let? maybe?
+OK researching this in the next post "Should I move to Digital Ocean from Heroku"
+
+Snippet from another site about LE - "Let's Encrypt it has a Certbot that automates installation on webservers (Apache, Nginx): Let’s Encrypt is a new Certificate Authority (CA) that provides an easy way to obtain and install free TLS/SSL certificates, thereby enabling encrypted HTTPS on web servers. It simplifies the process by providing a software client, Certbot, that attempts to automate most (if not all) of the required steps. Currently, the entire process of obtaining and installing a certificate isfully automated on both Apache and Nginx web servers." 
+
+
 Side notes:
-
-Learned more about <mark>Let's Encrypt</mark> - it has a Certbot that automates installation on webservers (Apache, Nginx):
->Let’s Encrypt is a new Certificate Authority (CA) that provides an easy way to obtain and install >free TLS/SSL certificates, thereby enabling encrypted HTTPS on web servers. It simplifies the process by providing a software client, Certbot, that attempts to automate most (if not all) of the required steps. Currently, the entire process of obtaining and installing a certificate isfully automated on both Apache and Nginx web servers. 
-
 * might need to add `config.force_ssl = true` to application.rb (from SO post from 2015) 
