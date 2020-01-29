@@ -10,14 +10,14 @@ date:   2020-01-28
 
 *Error* while doing Google login on https:
 
-`ActiveRecord::StatementInvalid (PG::UndefinedTable: ERROR:  relation "identities" does not exist`. 
-OH apparently DB tables have not been created yet…. 
+`ActiveRecord::StatementInvalid (PG::UndefinedTable: ERROR:  relation "identities" does not exist`\
+OH apparently DB tables have not been created yet…\
 Solved by - did `heroku run rake db:migrate` and verified in heroku app dashboard that DB was created and had 9 tables
 
 *Error* next one while trying to google login:
 
 `ActiveRecord::StatementInvalid (PG::UndefinedColumn: ERROR:  column "2020-01-28" does not exist
-2020-01-28T20:20:47.117922+00:00 app[web.1]: LINE 6:       AND dailies.date = "2020-01-28";`. 
+2020-01-28T20:20:47.117922+00:00 app[web.1]: LINE 6:       AND dailies.date = "2020-01-28";`\ 
 Looks like the date format with double quotes is not liked by Postgres. I recall having to put it in for sqlite locally. 
 
 Solved by: changing to single quotes (and verified by installing psql locally, connecting to heroku db by `heroku pg:psql` and testing it out, worked). 
