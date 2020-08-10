@@ -24,7 +24,7 @@ github_username:  bhumi1102
 
 # Build settings
 markdown: kramdown
-theme: jekyll-theme-cayman
+theme: minima
 plugins:
   - jekyll-feed
 
