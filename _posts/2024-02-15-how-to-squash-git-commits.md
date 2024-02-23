@@ -185,4 +185,3 @@ Note: Force pushing and rewriting history has to be used with caution, especiall
 
 With that, your remote feature branch has one single squashed commit. When your PR is approved and merged, `main` will have a clean and readable history. All your 47 commit messages that say things like 'typo' are gone.
 
-{% include subscribe.html %}
