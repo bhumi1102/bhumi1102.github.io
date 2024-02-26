@@ -103,7 +103,7 @@ But the next obvious enhancement is to update the search results as the user typ
 
 ## Search-as-you-type with Stimulus
 
-In order to allow users to search as they type, we need to submit the search form automatically. We can use a Stimulus controller to do this. (I go over stimulus in a previous post, in case you'd like a refresher it's [here](https://buttondown.email/bhumi/archive/what-is-stimulusjs/))
+In order to allow users to search as they type, we need to submit the search form automatically. We can use a Stimulus controller to do this. (I go over stimulus in a previous post, in case you'd like a refresher it's [here](https://blog.theleafnode.com/what-is-stimulusjs/))
 
 We create a Stimulus controller called `search_form_controller.js` in `app/javascript/controllers` with the command `rails g stimulus search-form`.
 

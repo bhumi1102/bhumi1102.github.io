@@ -73,6 +73,6 @@ The outer Turbo Frame `turbo_frame_tag "books_page_#{@pagy.page}"` is there to w
 
 That is all and it works. Couple more point before I wrap up:
 
-As a mentioned in a [previous post](https://buttondown.email/bhumi/archive/how-to-build-responsive-search-with-turbo-frames/), the `src` attribute is powerful and comes in handy in a few use cases. The `loading` attribute is also useful outside of the infinite scroll use case. The original `turbo-frame` can be an empty placeholder, waiting for the lazy loaded content, if it ever becomes visible in the viewport.
+As a mentioned in a [previous post](https://blog.theleafnode.com/build-search-with-hotwire/), the `src` attribute is powerful and comes in handy in a few use cases. The `loading` attribute is also useful outside of the infinite scroll use case. The original `turbo-frame` can be an empty placeholder, waiting for the lazy loaded content, if it ever becomes visible in the viewport.
 
 With nesting Turbo Frames, things could become convoluted and difficult to keep track of though. So we should use it with care, and tradeoff the added complexity with user experience.

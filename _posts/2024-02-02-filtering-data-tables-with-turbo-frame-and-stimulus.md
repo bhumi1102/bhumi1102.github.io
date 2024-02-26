@@ -5,7 +5,7 @@ title:  "Filtering Data Tables with Turbo Frame and Stimulus"
 
 This one is about Hotwire. We'll add filtering to some books using Turbo Frames and Stimulus. 
 
-Note: If you've been building with Hotwire for a while, there is likely nothing new here for you. If you haven't yet tried Hotwire, this will be a useful read and help you form a mental model of the core concepts. This post is closely related to a previous post where I implemented [responsive search](https://buttondown.email/bhumi/archive/how-to-build-responsive-search-with-turbo-frames/). And lastly, yes Turbo 8 will simplify certain things, but it's still worth understanding how to use Turbo Frames this way.
+Note: If you've been building with Hotwire for a while, there is likely nothing new here for you. If you haven't yet tried Hotwire, this will be a useful read and help you form a mental model of the core concepts. This post is closely related to a previous post where I implemented [responsive search](https://blog.theleafnode.com/build-search-with-hotwire/). And lastly, yes Turbo 8 will simplify certain things, but it's still worth understanding how to use Turbo Frames this way.
 
 Here's a screenshot of the application with filtering:
 
@@ -92,7 +92,7 @@ The response has a `turbo-frame` tag with the matching `id` from the request, so
 
 ## A *Pattern* is Beginning to Emerge
 
-If you remember the [previous post on building search](https://buttondown.email/bhumi/archive/how-to-build-responsive-search-with-turbo-frames/) with Hotwire, you may notice that overall implementing filtering is *very* similar to building search. In fact, it's exactly the same.
+If you remember the [previous post on building search](https://blog.theleafnode.com/build-search-with-hotwire/) with Hotwire, you may notice that overall implementing filtering is *very* similar to building search. In fact, it's exactly the same.
 
 **The core pattern for building searching or filtering** is this: we can target a 'results' `turbo-frame` from a `form` element by adding `data-turbo-frame` to the `form`. When the `form` is submitted, instead of making a request to the server, it adds a `src` attribute to the target `turbo-frame`. The `turbo-frame` then fires a request and the response updates just the `turbo-frame` with the results, leaving the `form` and rest of the page alone.
 
