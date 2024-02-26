@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "How To Squash Commits in Git"
+tags: git
 ---
 
 This one is about Git and squashing commits. Squashing commits can *feel* tricky since we're doing things like rewriting history, force pushing, and using the `rebase` command.

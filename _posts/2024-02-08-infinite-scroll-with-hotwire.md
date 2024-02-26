@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Building infinite scroll with Turbo Frames and Lazy Loading"
+tags: hotwire
 ---
 
 In this post, I continue the Hotwire series of building common UI patterns. In the book tracking demo app, we'll load more books from a collection of books as the user scrolls down a page, also know as infinite scroll. We also learn about pagination with the `pagy` gem.

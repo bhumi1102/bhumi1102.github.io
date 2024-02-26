@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "How do attr_accessor and attr_reader work?"
+tags: ruby
 ---
 
 When we define a `class` in an object oriented language, we typically add a few instance variables to the class. In order to read and write those instance variables outside of the class, we add 'getter' and 'setter' instance methods to the class (you may have seen these in other programming languages like C++ or Java). In Ruby, it can look something like this: 

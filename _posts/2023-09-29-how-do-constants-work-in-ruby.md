@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "How do constants work in Ruby?"
+tags: ruby
 ---
 
 When you hear the word a `constant`, what comes to mind? What would you tell someone what a `constant` is, in a programming language?

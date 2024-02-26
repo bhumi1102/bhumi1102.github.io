@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "How do Ruby objects and instance variables work?"
+tags: ruby
 ---
 
 Ruby is an object oriented language and has classes and objects and methods and instance variables and all those things. But if you are coming from other object oriented languages like Java, there are a few surprising things about how Ruby objects work that are useful to know. 
