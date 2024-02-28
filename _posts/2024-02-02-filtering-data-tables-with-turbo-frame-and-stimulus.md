@@ -9,7 +9,7 @@ Note: If you've been building with Hotwire for a while, there is likely nothing 
 
 Here's a screenshot of the application with filtering:
 
-![Screen Shot 2024-02-01 at 10.46.13 AM.png](https://assets.buttondown.email/images/90942b85-f325-4d8d-aaa0-6538da7cf268.png?w=960&fit=max) 
+![filtering books](/assets/images/filtering_data_tables_with_turbo_frame_and_stimulus_screenshot.png) 
 
 We'll use a reading/book notes tracking application. Let's filter a list books a user has read by genre and something I call 'reading mode'.
 

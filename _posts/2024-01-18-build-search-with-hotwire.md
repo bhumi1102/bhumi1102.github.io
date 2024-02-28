@@ -15,7 +15,7 @@ Sidenote: Using Turbo Frames is *one* way to build this search. With Hotwire the
 
 Here's a screenshot of what this search looks like (I was going to add a gif but that didn't work within email. It's on my twitter profile):
 
- ![Screen Shot 2024-01-18 at 1.16.24 PM.png](https://assets.buttondown.email/images/5144cbf9-9028-4f24-bb3a-f7c510eb662c.png?w=960&fit=max) 
+ ![search with hotwire](/assets/images/build_search_with_hotwire_screenshot.png) 
 
 Let's get into how to build this responsive search:
 

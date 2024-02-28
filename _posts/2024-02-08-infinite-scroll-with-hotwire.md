@@ -43,7 +43,7 @@ We can load the first 5 books in the book's `index` view. Then request the next 
 
 To help visualize things, this is what the DOM tree will look like as we scroll:
 
- ![Screen Shot 2024-02-07 at 7.57.07 AM.png](https://assets.buttondown.email/images/464d3fc2-9d4a-48d7-963e-1e219c9bac3a.png?w=960&fit=max) 
+ ![DOM tree as we scroll](/assets/images/infinite_scroll_with_hotwire_dom_tree.png) 
 
 Notice that the `turbo-frame` elements for the follow-on pages are nested inside the very first one. They all have `loading="lazy"` and a `src` and `id` attribute with a matching page number. 
 
