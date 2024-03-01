@@ -1,10 +1,8 @@
 ---
 layout: page
-title: About
+title: My Software Developer Journey
 permalink: /about/
 ---
-
-## My Software Developer Journey
 
 I've been working in Software for a long time, but offline mostly. Meaning I did not have a blog, newsletter, podcast, or a public github profile. And didn't really have a chance to go to conferences or be on twitter until the last couple years. Now I do have a blog so I'm writing down my software developer backstory here for other's benefit (and so I don't have to spend too much time talking about myself when we meet, as that's my least favorite subject to talk about:) ). 
 
