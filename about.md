@@ -4,7 +4,12 @@ title: About
 permalink: /about/
 ---
 
-## My Software Developer Journey
+### Why is this called Leaf Node?
+
+It's about getting to the bottom of things. As in, when you've reached the leaf of a binary tree during a search or something, you know that you've reached the end of the path you were traversing. The analogy (in my head) is about peeling the layers of abstractions and understanding thing deeply. Okay! yeah, I do realize this sounds completely dorky. But you what I don't care. I own this domain and I have decided to commit to it. Plus naming things is hard! So The Leaf Node it is. I may rename the newsletter to The Leaf Node newsletter, you may see The Leaf Node podcast.
+
+
+### My Software Developer Journey
 
 I've been working in Software for a long time, but offline mostly. Meaning I did not have a blog, newsletter, podcast, or a public github profile. And didn't really have a chance to go to conferences or be on twitter until the last couple years. Now I do have a blog so I'm writing down my software developer backstory here for other's benefit (and so I don't have to spend too much time talking about myself when we meet, as that's my least favorite subject to talk about:) ).
 
