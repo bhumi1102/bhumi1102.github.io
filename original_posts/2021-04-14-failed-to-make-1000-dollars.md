@@ -1,0 +1,37 @@
+layout: post
+title:  "Failed to make $1000 from a project: debugging why before moving on"
+---
+
+In the interest of taking my own [advice](https://theleafnode.com/debugging-and-indie-hacking/), debugging why the most recent [project](https://gumroad.com/l/indiepodnotesdb) I shipped "failed" (putting failed in quotes because you know it's not _that_ dramatic)
+
+I didn't _expect_ to make money from this project. I wanted to get this idea I had a while ago out of my system and was looking for a project for my Ship-It Challenge. But at some point a part of me started hoping that it would get me to the next step on the indie hacking ladder. My current step in the "stair-stepping ladder" is to **make $1000 from a single product**. (So far I've made few hundred dollars from an e-book and ~$1736 from _service_, i.e teaching in 2020. But the latter doesn't count in my mind as it's not a _product_)
+
+I know this is small potatoes, but the goal is to get into a habit of doing such an exercise for all products I ship. Alright, let's get to the actual debugging.  
+
+My hypotheses around why this didn't work:
+
+1.  I'm charging too much - nah $15 is not much (and I started off as $10 and couple people voluntarily paid $15). Also I DMed couple of prolific IndieHackers and asked them the pricing question. They both independently came to $15 to start and then increase.
+2.  I'm not charging enough - price signals quality and all. The insights and lessons and patterns I've captured, plus the names of tools, books, people are from spending about 2 hours per episode. Dissecting what was said and cross-referencing by looking into the guest and their business online. I even re-listened to some past episodes. But a lower price _may_ signal that this was haphazardly thrown together, which is possible to do by listening at speed, etc. I suppose.
+3.  I'm not clearly communicating what it is and why it would be useful - people are not as used to buying airtables I suppose. Also the only copy I have is on gumroad, it has bullet points indicating what "data" is captured in each column basically (i.e. features instead of benefits). Made a little video but probably didn't do a good enough job there. The screenshot I shared mid-way point of the project did [get some love](https://twitter.com/bhumi1102/status/1375198018794819585) from indies I respect so that was nice.
+4.  Not enough people who _would_ find this useful have come across it - the gumroad page has 185 views and 11 sales. (The first 10 sales happened from the first 110 views or so, and only 1 after that). So it's possible this _could_ reach 100 sales if I get 1000 views? I likely didn't do a good enough job promoting/marketing/sharing/launching. Shared it on [twitter](https://twitter.com/bhumi1102/status/1375198018794819585) [twice](https://twitter.com/bhumi1102/status/1381682496262311945) (~325 followers) and IndieHackers. I hesitate to do too much more. While we're doing a postmortem I think I now know _why_ the 2nd tweet didn't do well. I'm not providing any _value on the platform_, just @ mentioning a boatload of people 🤦‍♀️. **Sometimes you have actually do the dumb thing to really learn the lesson.**
+5.  It's not solving a problem people have, or one that they are willing to pay to solve - this is likely the case. Or it doesn't seem valuable _yet_ with 25 episodes. I didn't make it clear in the copy that this will keep growing. I plan to add at least one episode per week now so it'll have 75 by the year end. Of the 11 sales one person told me they are looking for list of entrepreneurs to feature on for their biz and I'm "saving them a ton of time." This is not a use case I'd considered. I _am_ shining a light on guests, and their businesses and if the sales grow they should benefit too hopefully. Some people who bought this also [tweeted](https://twitter.com/ellenkdonnelly/status/1376239486024220673) about the existence of the IndieHacker community, apparently there are entrepreneurs who are not aware of it yet. So if this reaches more people, maybe it can bring more people to the IndieHacker community, newsletter, etc. (I put a link to all of that the Gumroad page).
+
+There are probably other reasons but I'll wrap it up with those five.
+
+Other feelings: **making money online from scratch by creating something on your own is hard.** I knew this intellectually but experiencing it is different. It can feel embarrassing and humbling and hurts the ego at times (transitioning from a six figure software engineer salary). The other little voices in my head want to say "Also this is going so slowly. You're behind. You should've made more progress by now. Just make something people want, come on. And get good doing this marketing stuff already." To those voices, we say "okay that's interesting. Thank you much and be quiet now."
+
+It's not all bad though, especially if we can find a way to enjoy the journey (and if you're stubborn like me you know you **will** get there as you have no plans of quitting or giving up until you do!). I really did enjoy dissecting these 25 stories of 25 real businesses built from scratch by real people with unique life stories. It is inspiring and energizing and encouraging and all of that good stuff. I did have some "I get it, I get it now" movements while processing the details of the businesses. Hopefully some of that advice seeped into by subconscious will benefit my actions going forward. 
+
+### Anything good come out this?
+
+Sure the glass is always half full in my head. I took many [actions](https://theleafnode.com/best-indiehacker-podcast-episodes/) as a result of consuming the podcast. Some are: 
+
+* Many stories gave me this insight that I really need to talk to others on this path and connect with more indies on a regular basis. This lead me to reach out to @Charlie and join Weekend Club. In fact, I decided to spend the $115 I did earn from this project on [indiehacker's](https://twitter.com/bhumi1102/status/1379854964655263754) [products](https://twitter.com/bhumi1102/status/1379854964655263754), including this.
+* @jdnoc’s story confirmed by conviction about my morning work time 5:30am to 7:00am daily.
+* I plan to continue to study successful indie businesses. Zooming into how they each got their first 10 to 100 customers. Covering both the human size and biz side of why it works in a [new series of bite sized case studies](https://www.indiehackers.com/series/why-it-works). Do subscribe, if you want.
+
+### So what now
+
+That's the easy part. I have a commitment to ship something every 6 weeks. So moving on to the the next project. Next 6 week cycle starts on Monday April 19. I have 2 or 3 projects short-listed and one I'm leaning towards. Need to do some planning of tasks, then get on with it!
+
+Oh and I am also going on an advice diet for a while. This will include all things podcasts, articles, books, twitter threads. I need to work out the details and then will publicly share and commit to this new "diet". I've done enough research to avoid at least the biggest minefields in this journey. And if I still have major blind spots, so be it. The fear of suffering from potentially avoidable mistakes is worse then actually making the mistake. So no more consuming advice just doing.
