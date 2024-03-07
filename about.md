@@ -6,7 +6,9 @@ permalink: /about/
 
 ### Why is this called Leaf Node?
 
-It's about getting to the bottom of things. As in, when you've reached the leaf of a binary tree during a search or something, you know that you've reached the end of the path you were traversing. The analogy (in my head) is about peeling the layers of abstractions and understanding thing deeply. Okay! yeah, I do realize this sounds completely dorky. But you what I don't care. I own this domain and I have decided to commit to it. Plus naming things is hard! So The Leaf Node it is. I may rename the newsletter to The Leaf Node newsletter, you may see The Leaf Node podcast.
+The way I think about learning/teaching and my writing/sharing is that it's about **getting to the bottom of things**. As in, when you are traversing a binary search tree (I know, stay with me, it does makes sense soon) and you reach the leaf node - a node without any children - you know that you've reach the end. Similary when you use an database index using B+ tree, when you reach the leaf node, you've found what you're looking for.
+
+Anyway...that was the analogy in my head, when I bought the domain couple years ago. I admit the real reason why my Internet home is going to be called The Leaf Node is that I own this domain. And I'm commiting to one domain! And also because, as you know, naming things is hard! But also! What's in a name? That which we call a rose, by any other word, etc. etc. So The Leaf Node it is. I may rename the newsletter to The Leaf Node newsletter. We'll see.
 
 ### My Software Developer Journey
 
