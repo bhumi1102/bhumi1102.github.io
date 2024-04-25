@@ -30,7 +30,7 @@ If you have any questions feel free to include them in the form too.
 
 ## 1-on-1 Sessions
 
-If you're interested in 1-on-1 sessions, I do have 1 or 2 spots. Please email me at bhumi at theleafnode dot com. I typically start with a (free) intro chat and we see if it's a good fit from there.
+If you're interested in 1-on-1 sessions, I do have 1 or 2 spots open in May 2024. Please email me at bhumi [at] theleafnode [dot] com. I typically start with a (free) intro chat and we see if it's a good fit from there.
 
 
 ## Reviews
