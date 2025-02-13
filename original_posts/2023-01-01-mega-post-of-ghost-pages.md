@@ -237,4 +237,36 @@ My own mindset - what does it mean to take it seriously (also I don't want to be
 schedule meetings with potential customers and partners daily - to get feedback from other developers or informal chat with developers about Rails or how they do things and learn things in general.
 for deadlines - have a publishing calendar and tell people in WC about it and stick to it and share every time a publish blog posts or videos in WC. keep it sustainable but 2x per week at least!
 
+--
+
+## Programming Terminology - mostly JavaScript related
+
+[Write in a casual fun tone. Use personal examples of where I came across it]
+General Programming / Computer Science
+Syntactic Sugar - arrow functions in Javascript, hash rocket in Ruby
+Cross Cutting Concern - mentioned in React docs (higher order component, render props). A thing in Java also aspect oriented programming
+Javascript / Modern Web Dev Alphabet Soup
+Get the full list from here - https://dev.to/ageekdev/a-complete-guide-to-javascript-tooling-56eg
+browser-sync - watches files for changes and hot reload them basically? (can be used with gulp and grunt for workflow)
+npm - node package manager. directory and CLI. Largest repository of Javascript libraries in the world.
+npx - for running packages installed from npm registry. Also a way to try out packages without download them, manage dependencies.
+yarn - an npm alternative in a way. Released by fb in 2016, to solve speed and security issues with npm. npm still manages the database of JS software. yarn is just the CLI interface to that db. Rails uses this instead of npm. NPM registry is like rubygems.org. yarn CLI is like bundler.
+babel - translates HTML looking code (aka JSX code) into Javascript code, "behind-the-scenes" during runtime. Babel compiles code into an older version of JavaScript (ES5) that all browsers support. Babel is written completely in JavaScript and can actually run in the browser!
+JSX - allows us to write HTML elements in JavaScript, which is then rendered to the DOM. JavaScript XML is a form of markup that allows us to write HTML in React by converting HTML tags into React elements. Each tag in JSX serves as a “function call” that creates an element using createElement(). JSX is available since ES6 (aka JavaScript 2015). JSX is not required for coding in React, but it makes things cleaner and easier to read/understand.
+MDX - "MDX is an authorable format that lets you seamlessly write JSX in your Markdown documents. You can import components, such as interactive charts or alerts, and embed them within your content. This makes writing long-form content with components a blast" So a way of putting HTML-like thing in a markdown document.
+next.js - React based meta-framework
+nuxt.js - Vue based meta-framework
+VuePress - alternative to nuxt.js. Created by the creator of VueJS. (In Dave Stewart's experience VuePress is better) 
+gatsby.js - static site generator based on React
+webpacker - is a Rails wrapper around the webpack build system that provides a standard webpack configuration and reasonable defaults.
+webpack - ('compititor' of sprokets but better integration with npm packages) is a front-end build system. With webpack, you can manage JavaScript, CSS, and static assets like images or fonts. Webpack will allow you to write your code, reference other code in your application, transform your code, and combine your code into easily downloadable packs.
+Grunt - 
+Gulp.js - 
+
+Rails Ecosystem - What's What
+webpacker gem - wrapper around webpack with reasonable defaults and configuration (in webpacker.yml file)
+react-rails gem - react-rails is the official React community gem for integrating React with Rails. Provides a react_component helper method which makes it easy to pass Rails data to components. Also provides a component generator (rails generate react:component...) react-rails can be used with webpacker or Sprockets, to bundle JSX into asset pipeline.
+react_on_rails gem - created by "ShakaCode". older one, before Rails 6 added more direct support for using React via webpacker. Also adds a react_component helper method (similar to react-rails gem). Main advertised benefits are server-side rendering, Redux and React Router integration.
+react_ujs - react-rails gem uses this library
+
 
