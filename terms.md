@@ -3,7 +3,7 @@ layout: default
 title: Technical Terms
 ---
 
-# Technical Terms Dictionary
+# The Friendly Dictionary of Technical Terms
 
 {% assign sorted_terms = site.terms | sort: 'title' %}
 <ul>
