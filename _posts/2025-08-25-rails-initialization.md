@@ -1,8 +1,9 @@
 
 ---
 layout: post
-title:  "Rails Initialization: What happens when you run Rails Server command"
+title: "Rails Initialization - What happens when you run Rails Server command"
 ---
+
 
 What happens when we run the `rails server` command? A lot. It initializes the entire Rails framework, boots the application, and starts the web server. In this post, we go over the timeline of what happens and why it's useful to understand this in practice. 
 
