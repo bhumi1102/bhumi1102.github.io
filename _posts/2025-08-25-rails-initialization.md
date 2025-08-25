@@ -1,7 +1,7 @@
 
 ---
 layout: post
-title: "Rails Initialization - What happens when you run Rails Server command"
+title:  "Rails Initialization - What happens when you run Rails Server command"
 ---
 
 
