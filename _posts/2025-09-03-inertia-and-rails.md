@@ -1,7 +1,7 @@
 
 ---
 layout: post
-title:  "How Inertia works under the hood with Rails and React"
+title:  "How Inertia works under-the-hood with Rails and React"
 ---
 
 Let's explore how Inertia works under the hood. Because many production codebases use Rails *with* some frontend thing (which is not Hotwire), in practice. From Rails API + single page app (SPA) to Rails views along with React components in some hybrid setup, with varying degree of complexity. Inertia is an option in this space and it *seems* simple. What allows it to serve as a glue between Rails and JavaScript components. How does it work?
