@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title:  "How Inertia works under-the-hood with Rails and React"
@@ -7,7 +6,7 @@ title:  "How Inertia works under-the-hood with Rails and React"
 Let's explore how Inertia works under the hood. Because many production codebases use Rails *with* some frontend thing (which is not Hotwire), in practice. From Rails API + single page app (SPA) to Rails views along with React components in some hybrid setup, with varying degree of complexity. Inertia is an option in this space and it *seems* simple. What allows it to serve as a glue between Rails and JavaScript components. How does it work?
 
 ## What is Inertia?
-Inertia a tool that allows you to create client-side rendered, single-page apps, *without* turning our Rails app into an API only mode. It has adapters for several server-rendered frameworks (e.g. Rails) and several Javascript component libraries (e.g. React) that you can mix and match. 
+Inertia is a tool that allows you to create client-side rendered, single-page apps, *without* turning our Rails app into an API only mode. It has adapters for several server-rendered frameworks (e.g. Rails) and several Javascript component libraries (e.g. React) that you can mix and match. 
 
 In an Inertia app, Rails controllers return data directly to React components. There is no JSON API, no client-side routing, or client-side state management libraries.
 
