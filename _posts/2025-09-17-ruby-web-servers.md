@@ -11,7 +11,7 @@ What does a web server actually *do*? I imagine all of us at least half understa
 
 We are going to focus on the last point, concurrency, in this post.
 
-> This post **is** beginner friendly. If you are newish to programming, you should be able to follow along just fine.
+>  This post **is** beginner friendly. If you are newish to programming, you should be able to follow along just fine.
 
 One motivating question: when we start the Rails server, we see the output below from Puma. What is the significance of "single mode" and "Min/Max threads"?
 
@@ -29,8 +29,6 @@ Puma starting in single mode...
 We can see in the Puma source code that there is a [variable `@todo`](https://github.com/puma/puma/blob/master/lib/puma/thread_pool.rb#L40) that contains the work to be performed in a Ruby Queue.
 
 Before we get too far, let's review some common terms around concurrency. I think it's useful to be clear about words and their meaning.
-
-> You can also [read this online]()
 
 ## Process, Thread, I/O bound, CPU bound, Concurrency, Latency
 A **process** is an independent program in execution with its own memory. Operating systems schedule processes and manage its resources. The word "worker" is used interchangeably with "process" in web servers/concurrency discussions. A **thread** is a smaller unit of work within a process. Threads are light-weight, it's easier to switch between threads and they share memory (all threads within a process).
