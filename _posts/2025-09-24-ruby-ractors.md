@@ -17,8 +17,6 @@ What are Ractors, how do they enable parallelism, and how does that help with pe
 
 Ractors were introduced in Ruby 3.0, but they have been an experimental feature for a while. However, it appears that the Ruby core team is working diligently to make the implementation more robust for the upcoming Ruby 3.5 release.
 
-> You can also [read this online]()
-
 ## Motivation for Ractors
 In a [previous post](https://theleafnode.com/ruby-web-servers/), we learned about Ruby's Gobal VM Lock (GVL) and how only one CPU-bound task can execute at a time. The GVL is held during CPU work and it's released during I/O work. So we can achieve concurrency (by that we mean interleaving tasks) but not true parallelism, where multiple tasks are being executed at literally the same time on multiple CPU cores. 
 
@@ -217,9 +215,3 @@ puts Benchmark.realtime { p test_ractors }
 For me, Ractors were much slower than Threads and Threads were comparable to sequential work. Which is surprising. Most likely explanation is that the overhead of creating Ractors is not amortized in these small examples.
 
 To wrap up, the promise of Ractors is true parallelism with CPU-heavy work, in a web application it could be something like JSON parsing. Each Ractor has its own GVL + isolated memory and can execute Ruby code simultaneously on different CPU cores. Ractors are still experimental but keep an eye out for Ruby 3.5 :)
-
-That's all for this one! Until next time,
-
-Bhumi
-
-P.S. The goal with Ractors has been to achieve parallelism with CPU-heavy work. What if we wanted to optimize for IO-heavy work? Ruby Fibers have this goal and we'll look at Fibers, the Async gem, and Falcon web server in a follow-on post.
