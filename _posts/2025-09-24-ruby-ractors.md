@@ -83,7 +83,7 @@ We can see all four methods in the example below:
 => 9
 ```
 
-All of these methods exist because Ractors don’t share mutable state. The only way they interact is by safely passing messages. The [Ractor docs](https://docs.ruby-lang.org/en/3.4/ractor_md.html) have a more details. 
+All of these methods exist because Ractors don’t share mutable state. The only way they interact is by safely passing messages. The [Ractor docs](https://docs.ruby-lang.org/en/master/ractor_md.html) have the latest details. 
 
 ## Comparing Ractor Performance
 Let's see some code using Ractors and compare it to some sequential code first.
