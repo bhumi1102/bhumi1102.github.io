@@ -3,17 +3,9 @@ layout: post
 title:  "Ruby Fibers and Async"
 ---
 
-{% if subscriber.metadata.first_name %}
-Hey {{ subscriber.metadata.first_name }},
-{% else %}
-Hi there,
-{% endif %}
+In a [previous post](https://theleafnode.com/ruby-ractors/), we saw that the goal with Ractors is to achieve parallelism and optimize for CPU-heavy work. What if we wanted to optimize for IO-heavy work, where the CPU is waiting for the results of some external work? Ruby Fibers have this goal. 
 
-In a [previous post](), we saw that the goal with Ractors is to achieve parallelism and optimize for CPU-heavy work. What if we wanted to optimize for IO-heavy work, where the CPU is waiting for the results of some external work? Ruby Fibers have this goal. 
-
-> You can [read this online]().
-> 
-> Also, this post is intended to be beginner friendly. We will define terms enough to get a practical sense of what's what (but not in a pure computer science or academic way).
+> This post is intended to be beginner friendly. We will define terms enough to get a practical sense of what's what (but not in a pure computer science or academic way).
 
 ## What are Fibers?
 Fibers have been around for a while, since Ruby 1.9 but become more practical after Ruby 3.0. Fibers are one way to do concurrency in Ruby. Let's unpack the below from the [docs](https://docs.ruby-lang.org/en/master/Fiber.html):
@@ -47,18 +39,18 @@ The below code demonstrates `resume` and `yield`:
   from (try-fibers):8:in '<main>'
 ```
 
-## Fiber Scheduler And Async Gem
+## Fiber Scheduler and the Async Gem
 Ruby 3.0 introduced the concept of a Fiber scheduler with the `Fiber::Scheduler` class.
 
 The goal of a Fiber Scheduler is to make I/O non-blocking. What does it mean for something to be **non-blocking**? Let's use `sleep()` as an example. 
 
-Normally, when we call `sleep(1)` in Ruby, the entire thread is blocked for 1 second. Nothing else in that thread can run until `sleep` finishes (Side note: but other threads *can* run as I/O waits do release the GVL <-- connecting this to [this post](https://theleafnode.com/ruby-web-servers/)). If you had multiple Fibers, they’d all be stuck waiting.
+Normally, when we call `sleep(1)` in Ruby, the entire thread is blocked for 1 second. Nothing else in that thread can run until `sleep` finishes (Side note: but other threads *can* run as I/O waits do release the GVL <-- connecting to [this post](https://theleafnode.com/ruby-web-servers/)). If you had multiple Fibers, they’d all be stuck waiting.
 
-The Fiber Scheduler turns `sleep` (and other I/O waits) into non-blocking operations. It intercepts blocking operations such as `sleep` and says "okay, this Fiber is waiting 1 second. Let’s yield back to the scheduler and run another Fiber in the meantime." 
+The Fiber Scheduler turns `sleep` (and other I/O waits) into non-blocking operations. It intercepts blocking operations and says "okay, this Fiber is waiting 1 second. Let’s yield back to the scheduler and run another Fiber in the meantime." 
 
-As a result, our program can have hundreds or thousands of Fibers, all “sleeping” or waiting on I/O, and the scheduler can juggle them cooperatively on a single thread.
+As a result, our program can have hundreds or thousands of Fibers, all “sleeping” or waiting on I/O, and the scheduler can juggle them cooperatively on a single Thread.
 
-Note that the `Fiber::Scheduler` in Ruby is an abstract class. It doesn't magically make `sleep` non-blocking. We need something that implements the scheduler. (i.e. if you try `Fiber.set_scheduler(Fiber::Scheduler.new)` that won't work)
+Note that the `Fiber::Scheduler` in Ruby is an abstract class. It doesn't magically make `sleep` non-blocking (i.e. if you try `Fiber.set_scheduler(Fiber::Scheduler.new)` that won't work). We need something that implements the scheduler.
 
 The `Async` gem [implements](https://github.com/socketry/async/blob/eb873e4a5c300f4d80ad6345894dc50277126a5c/lib/async/scheduler.rb#L28) the `Fiber::Scheduler` [interface](https://docs.ruby-lang.org/en/master/Fiber/Scheduler.html). So we can install that gem and make our `sleep` non-blocking.
 
@@ -119,8 +111,7 @@ All fibers finished!
 
 We can see from the order of the `puts` statements that when Fiber 1 hits the `sleep(1)` line it yields to the scheduler and the "Fiber n is starting" line is printed for others Fibers *before* the "Fiber 1 is done" line is printed after Fiber 1 is resumed by the scheduler (following the `sleep`).
 
-Inside the the `Async` block, Fibers yield cooperatively and many Fibers can run concurrently in one OS thread.
+Inside the the `Async` block, Fibers yield cooperatively and many Fibers can run concurrently in one OS thread. That's the main idea behind Fibers.
 
-That's the main idea behind Fibers. For the latest on Fibers in Ruby, here's the [Fiber documentation](https://docs.ruby-lang.org/en/master/Fiber.html)
-
-Zooming out, the promise of Fibers is concurrency in an I/O-heavy workload where there is lot of waiting. Since Fibers are "light-weigh" we can have thousands of Fibers in single OS Thread and switch among them "cheaply". Fibers don't run in parallel or on multiple cores though. The other side of this spectrum is running multiple Threads or even multiple OS processes in parallel on multiple CPU cores. That's the direction multi-process Ruby web servers such as Unicorn and Pitchfork take (to be continued :). 
+Zooming out, the promise of Fibers is concurrency in an I/O-heavy workload where there is lot of waiting. Since Fibers are "light-weigh" we can have thousands of Fibers in single OS Thread and switch among them "cheaply". Fibers don't run in parallel or on multiple cores though. The other side of this spectrum is running multiple Threads or even multiple OS processes in parallel on multiple CPU cores. That's the direction multi-process Ruby web servers such as Unicorn and Pitchfork take (to be continued :)
+ 
