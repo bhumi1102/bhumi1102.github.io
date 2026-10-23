@@ -1,0 +1,190 @@
+---
+layout: null
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Leaf Node | Agentic Workflows & Automation Consulting</title>
+  <meta name="description" content="The Leaf Node translates business goals into agentic workflows and automations. Build + Teach: working software, and the know-how to own it.">
+  <link rel="canonical" href="https://theleafnode.com/">
+  <link rel="icon" type="image/png" href="/assets/favicons/32x32.png">
+  <link rel="alternate" type="application/rss+xml" title="The Leaf Node blog" href="/feed.xml">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://theleafnode.com/">
+  <meta property="og:title" content="The Leaf Node | Agentic Workflows & Automation Consulting">
+  <meta property="og:description" content="Translate business goals into agentic workflows and automations. Build + Teach.">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@bhumi1102">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --blue-900: #0f2a4a;
+      --blue-700: #1d4ed8;
+      --blue-600: #2563eb;
+      --blue-50:  #eff6ff;
+      --gray-900: #111827;
+      --gray-700: #374151;
+      --gray-500: #6b7280;
+      --gray-200: #e5e7eb;
+      --white:    #ffffff;
+      --max:      1080px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      color: var(--gray-700);
+      background: linear-gradient(180deg, var(--blue-50) 0%, var(--white) 60%);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3 { color: var(--gray-900); line-height: 1.2; margin: 0; letter-spacing: -0.02em; text-wrap: balance; }
+    p { margin: 0; }
+    a { color: var(--blue-700); }
+
+    .container { width: 100%; max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+
+    .eyebrow {
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--blue-600);
+    }
+
+    /* Nav */
+    .nav .container { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+    .brand { font-weight: 700; font-size: 18px; color: var(--gray-900); text-decoration: none; }
+    .brand span { color: var(--blue-600); }
+    .nav a.link { color: var(--gray-700); text-decoration: none; font-size: 15px; font-weight: 500; }
+    .nav a.link:hover { color: var(--blue-700); }
+
+    /* Main */
+    main { flex: 1; display: flex; align-items: center; padding: 32px 0 48px; }
+    .grid { display: grid; grid-template-columns: 1fr 1.1fr; gap: 72px; align-items: center; }
+
+    .intro h1 { font-size: clamp(30px, 3.6vw, 42px); font-weight: 700; margin: 12px 0 20px; }
+    .intro .lead { font-size: 18px; color: var(--gray-500); max-width: 460px; }
+
+    .approach {
+      margin-top: 28px;
+      padding: 16px 20px;
+      border-left: 3px solid var(--blue-600);
+      background: var(--white);
+      max-width: 460px;
+    }
+    .approach strong { display: block; color: var(--blue-900); font-size: 15px; margin-bottom: 2px; }
+    .approach p { font-size: 15px; }
+
+    .cta { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; margin-top: 32px; }
+    .btn {
+      display: inline-block;
+      padding: 12px 24px;
+      border-radius: 8px;
+      background: var(--blue-600);
+      color: var(--white);
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.15s;
+    }
+    .btn:hover { background: var(--blue-700); }
+    .cta .email { font-size: 15px; color: var(--gray-500); }
+
+    .services h2 { margin-bottom: 8px; }
+    .services ul { list-style: none; padding: 0; margin: 0; }
+    .services li { padding: 20px 0; border-bottom: 1px solid var(--gray-200); }
+    .services li:last-child { border-bottom: 0; }
+    .services h3 { font-size: 18px; margin-bottom: 6px; }
+    .services p { font-size: 15px; }
+
+    /* Footer */
+    footer { padding: 20px 0; font-size: 14px; color: var(--gray-500); border-top: 1px solid var(--gray-200); }
+    footer .container { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+    footer nav { display: flex; gap: 20px; }
+    footer a { color: var(--gray-500); text-decoration: none; }
+    footer a:hover { color: var(--blue-700); }
+
+    @media (max-width: 860px) {
+      .grid { grid-template-columns: 1fr; gap: 40px; }
+    }
+
+    @media (max-width: 640px) {
+      .container { padding: 0 16px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="nav">
+    <div class="container">
+      <a class="brand" href="/">The Leaf <span>Node</span></a>
+      <a class="link" href="/blog/">Blog</a>
+    </div>
+  </header>
+
+  <main>
+    <div class="container grid">
+      <div class="intro">
+        <span class="eyebrow">Agentic workflows &amp; automation</span>
+        <h1>Turn business goals into agentic workflows and automations.</h1>
+        <p class="lead">I help teams put AI agents to work. I build the tools with you, then teach you to run and extend them yourself.</p>
+
+        <div class="approach">
+          <strong>Build + Teach</strong>
+          <p>You get working software and the know-how to own it. No black boxes.</p>
+        </div>
+
+        <div class="cta">
+          <a class="btn" href="mailto:hi@theleafnode.com?subject=Working%20together">Email me</a>
+          <span class="email">hi@theleafnode.com</span>
+        </div>
+      </div>
+
+      <section class="services">
+        <span class="eyebrow">Services</span>
+        <ul>
+          <li>
+            <h3>Organize your company's data and context</h3>
+            <p>I help you identify relevant data and hidden processes. Then encode your business context for agents so you can get more value out of the tokens you pay for.</p>
+          </li>
+          <li>
+            <h3>Internal tools &amp; automations</h3>
+            <p>I build the tools and automations your business needs, then teach you to manage them with coding agents.</p>
+          </li>
+          <li>
+            <h3>Inherited an agent-built app?</h3>
+            <p>I help you unpack software built with AI agents: what it does, how it fits together, and how to change it safely.</p>
+          </li>
+        </ul>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <span>&copy; {{ site.time | date: "%Y" }} The Leaf Node</span>
+      <nav>
+        <a href="/blog/">Blog</a>
+        <a href="/about/">About</a>
+        <a href="https://buttondown.com/bhumi">Newsletter</a>
+        <a href="https://github.com/bhumi1102">GitHub</a>
+      </nav>
+    </div>
+  </footer>
+
+</body>
+</html>
